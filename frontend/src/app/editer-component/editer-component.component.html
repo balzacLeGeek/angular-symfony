@@ -1,0 +1,38 @@
+<div class="container">
+    
+        <div class="row">
+            <div class="col-sm-4">
+    
+                <form action="">
+                    
+                    <div class="form-group">
+                        <label>Id :</label>
+                        <input type="text" [(ngModel)]="unClient.id" name="id" class="form-control" placeholder="" disabled>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Nom :</label>
+                        <input type="text" [(ngModel)]="unClient.nom" name="nom" class="form-control" placeholder="">
+                    </div>
+                    
+                    <div class="form-group">
+                    <label>Prenom :</label>
+                    <input type="text" [(ngModel)]="unClient.prenom" name="prenom" class="form-control" placeholder="">
+                    </div>
+    
+                    <div class="form-group">
+                    <label>Contact :</label>
+                    <input type="text" [(ngModel)]="unClient.contact" name="contact" class="form-control" placeholder="">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Addresse :</label>
+                        <input type="text" [(ngModel)]="unClient.addresse" name="addresse" class="form-control" placeholder="">
+                    </div>
+    
+                    <button (click)="updateClient()" class="btn btn-info mx-2">Modifier</button>
+                    <button (click)="listeClient()" class="btn btn-success">Retour</button>
+                </form>
+            </div>
+        </div>
+    </div>
