@@ -12,14 +12,17 @@ use Symfony\Component\Validator\Validator\ValidatorInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Serializer\Exception\NotEncodableValueException;
 
+/**
+ * @Route("/apip/client")
+ */
 class ClientController extends AbstractController
 {
     /**
-     * @Route("/apip/client", name="index_client",methods={"GET"})
+     * @Route("/", name="index_client",methods={"GET"})
      */
     public function index(ClientRepository $clientRepository)
     {
-        return $this->json($clientRepository->findAll(),200);
+        return $this->json($clientRepository->findAll());
 
         // return $this->render('client/index.html.twig', [
         //     'controller_name' => 'ClientController',
@@ -27,7 +30,7 @@ class ClientController extends AbstractController
     }
 
     /**
-     * @Route("/apip/client", name="store_client")
+     * @Route("/", name="store_client")
      */
     public function store(Request $request,ClientRepository $clientRepository,SerializerInterface $serializer,EntityManagerInterface $em,ValidatorInterface $validator)
     {
